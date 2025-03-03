@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Software Quality Metrics - $name</title>	
+</head>
+<link rel="stylesheet" type="text/css" href="Qlyreport_template.css">
+
+<script type="text/javascript">
+    var table_width = 200;
+
+    function hide_show_column(class_identifier)
+    {
+        var table=document.getElementById("package_categorization_table");
+        var checkbox_val=document.getElementById(class_identifier).checked;
+        var displaystyle;
+        if(!checkbox_val) {
+            displaystyle = "none";
+            table_width -= 30;
+        }
+        else {
+            displaystyle = "table-cell";
+            table_width += 30;
+        }
+        var all_col=document.getElementsByClassName(class_identifier);
+        for(var i=0;i<all_col.length;i++) {
+            all_col[i].style.display=displaystyle;
+        }
+        table.style.width = table_width + "%";
+    }
+</script>
+
+<body>
+<h1>Software Quality Metrics</h1>
+<h2>File: $name ($hash)</h2>
+<p>Path: <a href="file:///$abspath">$path</a></p>
+$metrics_information
+</body>
+</html>

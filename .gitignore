@@ -1,3 +1,15 @@
+# Development or inputs
+list_of_packages*.*
+temp.txt
+
+# Re-usable outputs
+download
+Qlymetrics_data.saved
+
+# Reports
+report
+report_*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,0 +1,67 @@
+table {
+    border: 1px solid black;
+    table-layout: fixed; width: 100%
+}
+
+th,
+td {
+    border: 1px solid black;
+    overflow: auto;
+    text-align: left;
+    vertical-align: top;
+}
+
+td.UNKNOWN {
+    background-color: lightgrey;
+}
+
+td.GREEN {
+    background-color: lightgreen;
+}
+
+td.YELLOW {
+    background-color: yellow;
+}
+
+td.RED {
+    background-color: tomato;
+}    
+
+.info {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.info .infotext {
+    visibility: hidden;
+    width: 220px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.info:hover .infotext {
+    visibility: visible;
+}
+
+.terminal td {
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+    padding: 0rem;
+    color: white;
+    font: 1.0rem Monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+  }
+  
+.terminal pre::selection {
+    background-color: blue;
+    text-shadow: none;
+  }
