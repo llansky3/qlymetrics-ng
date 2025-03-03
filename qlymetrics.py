@@ -203,16 +203,23 @@ def main(args):
             sys.stderr.write(f"The provided path {args.folder} doesn't exist! Please check and try again!\n")
             sys.exit(1)
 
-    # TODO: detect available tools and use just them
-    tools = [
-        Filesize(),
-        Pmccabe('/usr/bin'),
-        Cppcheck('/usr/bin'),
-        Splint('/usr/bin'),
-        Cpplint('/usr/bin'),
-        Buildlogs(apiurl, project),
-        Ctags('/usr/bin')
+    reportdir = './report'
+    if not os.path.exists(reportdir):
+        os.makedirs(reportdir)
+
+    all_implemented_tools = [
+        Filesize(), Pmccabe(), Cppcheck(), Splint(), Cpplint(), Ctags(), Buildlogs(apiurl, project)
     ]
+
+    report_tools = Qlyreport_Tools(reportdir)
+
+    # Detect available tools and use just them
+    tools = []
+    for tool in all_implemented_tools:
+        if tool.available:
+            tools.append(tool) 
+        report_tools.add_row(tool.get_html_table_row())
+    report_tools.write()
 
     datafile = './Qlymetrics_data.saved'
     if not os.path.exists(datafile) or not args.loading:
@@ -220,10 +227,6 @@ def main(args):
     else:   
         with open(datafile, 'rb') as f:
             srcfiles = pickle.load(f)
-
-    reportdir = './report'
-    if not os.path.exists(reportdir):
-        os.makedirs(reportdir)
 
     report_main = Qlyreport_Main(reportdir)
     for tool in tools:

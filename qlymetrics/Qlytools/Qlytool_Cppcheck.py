@@ -21,10 +21,12 @@ class Qlymetric_OrderOfTen(Qlymetric):
 
 
 class Cppcheck(Qlytool):
-    def __init__(self, toolpath):
+    def __init__(self, toolpath=None):
         super().__init__("Cppcheck", "Static code analysis by Cppcheck")
-        self.toolpath = toolpath
-        # TODO: Check if Cppcheck is available there and can be executed correctly
+        if toolpath is not None:
+            self.toolpath = toolpath
+        # Check if cppcheck is available there and can be executed correctly
+        self.available = self.check_if_installed('cppcheck --version')
 
     def get_metrics_dict(self):
         # Dictionary of provided metrics

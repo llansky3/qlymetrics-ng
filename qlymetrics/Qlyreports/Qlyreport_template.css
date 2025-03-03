@@ -11,6 +11,10 @@ td {
     vertical-align: top;
 }
 
+th.GREY {
+    background-color: lightgrey;
+}
+
 td.UNKNOWN {
     background-color: lightgrey;
 }

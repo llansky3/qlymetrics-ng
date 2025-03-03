@@ -1,6 +1,9 @@
 # qlymetrics-ng
 2nd generation of Qlymetrics framework for software quality metrics
 
+## List of implemented tools 
+[Please look here for details!](docs/tools-table.md)
+
 ## Example
 This fetches jemalloc package from [openSUSE:Factory OBS project](https://api.opensuse.org/package/show/openSUSE:Factory/jemalloc) and generate software quality metrics reports
 

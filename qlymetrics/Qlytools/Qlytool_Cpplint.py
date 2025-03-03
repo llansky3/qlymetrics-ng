@@ -5,13 +5,15 @@ from .Qlytool_Cppcheck import Qlymetric_OrderOfTen, Qlymetric_Zero
 
 from ..Qlymetrics import Qlymetric, Risk
 
-class Cpplint(Qlymetric):
+class Cpplint(Qlytool):
     # From: https://github.com/cpplint/cpplint
     #       https://google.github.io/styleguide/cppguide.html
-    def __init__(self, toolpath):
+    def __init__(self, toolpath=None):
         super().__init__("Cpplint", "Static code analysis by Cpplint")
-        self.toolpath = toolpath
-        # TODO: Check if Cpplint is available there and can be executed correctly
+        if toolpath is not None:
+            self.toolpath = toolpath
+        # Check if cpplint is available there and can be executed correctly
+        self.available = self.check_if_installed('cpplint --version')
 
     def get_metrics_dict(self):
         # Dictionary of provided metrics

@@ -16,11 +16,13 @@ class Qlymetric_NonZero(Qlymetric):
 
 class Buildlogs(Qlytool):
     def __init__(self, apiurl, project):
-        super().__init__("Build log", "Compiler and linker warnings from IBS")
+        super().__init__("Build log", "Compiler and linker warnings from Open Build Service (OBS)")
         self.apiurl = apiurl
         self.project = project
         # To not to repeat requests unnecessarily
         self.requested_data = {}
+        self.available = True
+        self.version = 'N/A'
 
     def get_metrics_dict(self):
         # Dictionary of provided metrics

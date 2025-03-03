@@ -31,10 +31,12 @@ class Qlymetric_Lines(Qlymetric):
             return Risk.RED
            
 class Pmccabe(Qlytool):
-    def __init__(self, toolpath):
+    def __init__(self, toolpath=None):
         super().__init__("Pmccabe", "Mccabe's cyclomatic complexity")
-        self.toolpath = toolpath
-        # TODO: Check if Pmccabe is available there and can be executed correctly
+        if toolpath is not None:
+            self.toolpath = toolpath
+        # Check if pmccabe is available there and can be executed correctly
+        self.available = self.check_if_installed('pmccabe -V')
 
     def get_metrics_dict(self):
         # Dictionary of provided metrics

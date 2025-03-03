@@ -5,6 +5,8 @@ from .Qlytool import Qlytool
 class Filesize(Qlytool):
     def __init__(self):
         super().__init__("File size", "Calculates size of the file in bytes")
+        self.available = True
+        self.version = 'N/A'
         
     def get_metric(self, fpath):
         # Get size of a given file
