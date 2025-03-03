@@ -1,6 +1,6 @@
 # List of implemented tools 
 
-Below table shows list of implemented tools. The versions is not so important but indicated the version of tool that was used during testing.
+Below table shows list of implemented tools. The versions are not so important but indicates the version of tool that was used during testing.
 
 <table id="qlyreport_table">
 <tr>
@@ -8,7 +8,6 @@ Below table shows list of implemented tools. The versions is not so important bu
 <th rowspan="1" class="GREY">Description</th>
 <th rowspan="1" class="GREY">Available</th>
 <th rowspan="1" class="GREY">Version</th>
-<th rowspan="1" class="GREY">Path</th>
 </tr>
 
 <tr>
@@ -16,7 +15,6 @@ Below table shows list of implemented tools. The versions is not so important bu
 <td rowspan="1">Calculates size of the file in bytes</td>
 <td rowspan="1">True</td>
 <td rowspan="1">N/A</td>
-<td rowspan="1">/usr/bin</td>
 </tr>
 
 
@@ -26,7 +24,6 @@ Below table shows list of implemented tools. The versions is not so important bu
 <td rowspan="1">True</td>
 <td rowspan="1">@(#) pmccabe 2.8
 </td>
-<td rowspan="1">/usr/bin</td>
 </tr>
 
 
@@ -36,7 +33,6 @@ Below table shows list of implemented tools. The versions is not so important bu
 <td rowspan="1">True</td>
 <td rowspan="1">Cppcheck 2.12.1
 </td>
-<td rowspan="1">/usr/bin</td>
 </tr>
 
 
@@ -51,7 +47,6 @@ Compiled using gcc -fmessage-length=0 -grecord-gcc-switches -O2 -Wall
 -D_FORTIFY_SOURCE=2 -fstack-protector-strong -funwind-tables
 -fasynchronous-unwind-tables -fstack-clash-protection -g
 </td>
-<td rowspan="1">/usr/bin</td>
 </tr>
 
 
@@ -63,7 +58,6 @@ Compiled using gcc -fmessage-length=0 -grecord-gcc-switches -O2 -Wall
 cpplint 1.4.5
 Python 3.6.15 (default, Sep 23 2021, 15:41:43) [GCC]
 </td>
-<td rowspan="1">/usr/bin</td>
 </tr>
 
 
@@ -75,7 +69,6 @@ Python 3.6.15 (default, Sep 23 2021, 15:41:43) [GCC]
 Addresses: <dhiebert@users.sourceforge.net>, http://ctags.sourceforge.net
 Optional compiled features: +wildcards, +regex
 </td>
-<td rowspan="1">/usr/bin</td>
 </tr>
 
 
@@ -84,7 +77,6 @@ Optional compiled features: +wildcards, +regex
 <td rowspan="1">Compiler and linker warnings from Open Build Service (OBS)</td>
 <td rowspan="1">True</td>
 <td rowspan="1">N/A</td>
-<td rowspan="1">/usr/bin</td>
 </tr>
 
 </table>
